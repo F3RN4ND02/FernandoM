@@ -1,8 +1,10 @@
 import * as React from "react"
+// import { BrowserRouter as Router, Route, } from 'react-router-dom'
 import Start from "../Components/start"
 import '../Styles/global.css'
 import Grid from '@mui/material/Grid';
 import avatar from '../images/avatar.jpg'
+import Navbar from '../Components/Navbar'
 
 // styles
 const pageStyles = {
@@ -19,6 +21,8 @@ const headingAccentStyles = {
 // markup
 const IndexPage = () => {
   return (
+    <>
+          <Navbar/>
     <main className='Landing'>
       <Grid container spacing={1}>
         <Grid item xl={6} sm={12} className='Left'>
@@ -44,6 +48,7 @@ const IndexPage = () => {
       />
       </Grid>
     </main>
+    </>
   )
 }
 
