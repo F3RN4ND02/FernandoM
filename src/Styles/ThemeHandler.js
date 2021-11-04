@@ -1,8 +1,6 @@
 import React, { createContext, useReducer } from "react"
 let SET_THEME
-​
 export const darkModeContext = createContext()
-​
 export const darkModeReducer = (state, action) => {
   switch (action.type) {
     case SET_THEME:
@@ -14,20 +12,17 @@ export const darkModeReducer = (state, action) => {
       return state
   }
 }
-​
 export const DarkModeState = props => {
   const initialState = {
     darkMode: "false"
   }
   const [state, dispatch] = useReducer(darkModeReducer, initialState)
-​
   const setDarkMode = async bool => {
     dispatch({
       type: SET_THEME,
       payload: bool
     })
   }
-​
   return (
     <darkModeContext.Provider
       value={{
